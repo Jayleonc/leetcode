@@ -1,5 +1,8 @@
 package 正常做题.src;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @author : Jayleonc
  * @date : 2021-12-08 17:06
@@ -26,5 +29,25 @@ public class LocalLinkedList {
             current = current.next;
         }
         System.out.println("NULL");
+    }
+
+    public static void roundPrintLinkedList(ListNode head) {
+        Deque<ListNode> deque = new LinkedList<>();
+        ListNode cur = head;
+        while (cur != null) {
+            deque.push(cur);
+            cur = cur.next;
+        }
+        while (!deque.isEmpty()) {
+            cur = deque.pop();
+            System.out.printf("%d\t", cur.val);
+        }
+    }
+
+    public static void round2(ListNode head) {
+        if (head.next != null) {
+            round2(head.next);
+        }
+        System.out.printf("%d\t", head.val);
     }
 }

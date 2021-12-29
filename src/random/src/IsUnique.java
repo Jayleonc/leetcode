@@ -1,3 +1,5 @@
+package random.src;
+
 import java.util.HashMap;
 
 /**

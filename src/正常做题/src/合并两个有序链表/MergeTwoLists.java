@@ -3,8 +3,7 @@ package 正常做题.src.合并两个有序链表;
 
 import 正常做题.src.ListNode;
 
-import static 正常做题.src.LocalLinkedList.createLinkedList;
-import static 正常做题.src.LocalLinkedList.printLinkedList;
+import static 正常做题.src.LocalLinkedList.*;
 
 /**
  * @author : Jayleonc
@@ -16,6 +15,8 @@ public class MergeTwoLists {
         ListNode l2 = createLinkedList(new int[]{1, 4, 5});
         ListNode listNode = mergeTwoLists(l1, l2);
         printLinkedList(listNode);
+//        roundPrintLinkedList(listNode);
+        round2(listNode);
     }
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
